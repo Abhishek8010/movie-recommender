@@ -22,8 +22,9 @@ model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X, y)
 
 # Save the model and encoders
+# Save the model and encoders
 os.makedirs("model", exist_ok=True)
 with open('model.pkl', 'wb') as f:
     pickle.dump((model, le_genre, le_industry), f)
 
-print("Model trained and saved as model.pkl.")
+print("Model trained and saved as model/model.pkl.")
